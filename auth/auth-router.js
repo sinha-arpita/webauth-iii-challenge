@@ -18,7 +18,9 @@ router.post("/register", (req, res) => {
 
   Users.add(user)
     .then(saved => {
-      res.status(201).json(saved);
+      const token = generateToken(user);
+      console.log("token", token)  
+      res.status(201).json({saved, token});
     })
     .catch(error => {
       res.status(500).json(error);
@@ -60,7 +62,7 @@ function generateToken(user) {
   };
 
   // const secret = 'shhhhdonttellanyone';
-  console.log("Secret", jwtSecret) //jwtSecret is an object,secret should be string ,so consoled it
+  //console.log("Secret", jwtSecret) //jwtSecret is an object,secret should be string ,so consoled it
   //and found that jwtSecret has a member with the same name jwtsecret as the object containing the secret in form of string 
  //const jwtSecret = require("../config/secrets").jwtSecret;if I don't do .jwsecret then its object and to access it 
  //everywhere I need to put JwtSecret.jwtSecret; object name and inside the object string name is same

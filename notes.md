@@ -1,3 +1,10 @@
+VIDEOS:
+https://youtu.be/38yjSjduofM
+https://www.youtube.com/watch?v=38yjSjduofM&feature=youtu.be :webauth3 diandra
+https://www.youtube.com/watch?v=ezTlyYqeR5o&feature=youtu.be: webauth4 diandra
+
+
+
 JWT site  for tokens, company name is :auth0
 
 we have to selsct yhe library as node.js
